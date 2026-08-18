@@ -1,18 +1,13 @@
-const params = new URLSearchParams(window.location.search);
-
-const selectedBook = params.get("book");
-const savedPage =
-    localStorage.getItem(
-        "nexus-page-" + selectedBook
+const params =
+    new URLSearchParams(
+        window.location.search
     );
 
-if (savedPage !== null) {
-
-    currentPage = Number(savedPage);
-
-}
+const selectedBook =
+    params.get("book");
 
 let currentPage = 0;
+
 
 
 const books = {
@@ -210,86 +205,25 @@ const books = {
             }
 
         ]
+    }   
 
-    },
+    };
 
-    unwritten: {
+    if (
+        typeof window.unwrittenChapters !== "undefined"
+    ) {
 
-    title: "THE UNWRITTEN ONE",
+     books.unwritten = {
 
-    author: "UMAR",
+        title: "THE UNWRITTEN ONE",
 
-    pages: [
+        author: "UMAR",
 
-        {
-            chapter: "3:17 A.M.",
+        pages: window.unwrittenChapters
 
-            content: `
-                <p>
-                    Umar woke from the same dream again.
-                </p>
+    };
 
-                <p>
-                    Somewhere beyond his window,
-                    the city slept beneath a silent sky.
-                </p>
-
-                <p>
-                    He reached for his phone.
-                </p>
-
-                <p>
-                    3:17 A.M.
-                </p>
-            `
-        },
-
-
-        {
-            chapter: "The Stranger",
-
-            content: `
-                <p>
-                    Something had changed.
-                </p>
-
-                <p>
-                    The clock had stopped.
-                </p>
-
-                <p>
-                    And somewhere nearby,
-                    someone was waiting for him.
-                </p>
-            `
-        },
-
-
-        {
-            chapter: "Déjà Vu",
-
-            content: `
-                <p>
-                    The railway platform felt familiar.
-                </p>
-
-                <p>
-                    Not because Umar remembered
-                    visiting it.
-                </p>
-
-                <p>
-                    But because some part of him
-                    remembered leaving it.
-                </p>
-            `
-        }
-
-    ]
-
-}
-
-};
+    }
 
 function displayPage() {
 
@@ -339,10 +273,6 @@ function displayPage() {
 
     document.getElementById("progress-bar").style.width =
         progress + "%";
-localStorage.setItem(
-    "nexus-page-" + selectedBook,
-    currentPage
-);
 }
 
 function nextPage() {
@@ -412,7 +342,14 @@ function decreaseFont() {
 
 }
 
-displayPage();
+if (
+    selectedBook &&
+    books[selectedBook]
+) {
+
+    displayPage();
+
+}
 
 // ==============================
 // 3D BOOK CARD TILT
