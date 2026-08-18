@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NEXUS//READER</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+    <div class="logo">
+        NEXUS//READER
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="library.html">
+            LIBRARY
+        </a>
+
+    </nav>
+
+    <div class="status">
+        ● READING MODE
+    </div>
+
+</header>
+
+
+<main class="reader">
+
+    <div class="progress-container">
+
+        <div id="progress-bar"></div>
+
+    </div>
+
+    <div class="reader-stars"></div>
+
+
+    <!-- BOOK INFORMATION -->
+
+    <section class="reader-header">
+
+        <p>
+            DATABASE // FILE 001
+        </p>
+
+        <h1 id="book-title">
+            THE ALCHEMIST
+        </h1>
+
+        <span id="book-author">
+           PAULO COELHO
+        </span>
+
+    </section>
+
+
+    <div class="reader-tools">
+
+        <span>
+           TEXT SIZE
+        </span>
+
+        <button onclick="decreaseFont()">
+           A−
+        </button>
+
+        <button onclick="increaseFont()">
+           A+
+        </button>
+
+    </div>
+
+
+
+<section class="reading-panel">
+
+
+    <!-- READING AREA -->
+
+    <section class="reading-panel">
+
+        <div class="chapter">
+
+            <p class="chapter-number">
+                CHAPTER 01
+            </p>
+
+
+            <h2 id="chapter-title">
+                The Beginning
+            </h2>
+        <div id="book-content"></div>
+
+            <p>
+                Loading book...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- READER CONTROLS -->
+
+    <section class="reader-controls">
+
+        <button onclick="previousPage()">
+            ← PREVIOUS
+        </button>
+
+        <span id="page-number">
+            PAGE 01 / 03
+        </span>
+
+        <button onclick="nextPage()">
+            NEXT →
+        </button>
+
+    </section>
+
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

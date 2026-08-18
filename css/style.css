@@ -1,0 +1,2846 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #05020a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    background: rgba(8, 3, 18, 0.9);
+
+    border-bottom: 1px solid #7b2cff;
+
+    box-shadow:
+        0 0 15px rgba(123, 44, 255, 0.25);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+.logo {
+    color: #c77dff;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 8px #9d4edd,
+        0 0 20px #7b2cff;
+}
+
+
+nav {
+    display: flex;
+
+    gap: 35px;
+}
+
+
+nav a {
+    color: #cfc3df;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #e0aaff;
+
+    text-shadow:
+        0 0 8px #c77dff,
+        0 0 20px #7b2cff;
+}
+
+
+.status {
+    color: #b8ffea;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px #7bffda;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 100px;
+
+    position: relative;
+
+    overflow: hidden;
+
+
+    background:
+
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(123, 44, 255, 0.35),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 25% 80%,
+            rgba(157, 78, 221, 0.15),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030107,
+            #0b0315,
+            #120522,
+            #05020a
+        );
+}
+
+
+/* PURPLE GLOW */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: 8%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(199, 125, 255, 0.25);
+
+    box-shadow:
+
+        0 0 40px rgba(123, 44, 255, 0.2),
+
+        0 0 100px rgba(123, 44, 255, 0.15),
+
+        inset 0 0 60px rgba(123, 44, 255, 0.1);
+}
+
+
+/* SECOND HOLOGRAM RING */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    right: 15%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(224, 170, 255, 0.3);
+
+    box-shadow:
+        0 0 30px rgba(199, 125, 255, 0.25);
+
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+
+    max-width: 720px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.system-text {
+
+    color: #c77dff;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 28px;
+
+    text-shadow:
+        0 0 10px #7b2cff;
+}
+
+
+.hero h1 {
+
+    font-size: 76px;
+
+    line-height: 0.95;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #e0aaff,
+            #9d4edd
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 30px rgba(157, 78, 221, 0.2);
+}
+
+
+.hero-text {
+
+    color: #9f91ad;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+
+    max-width: 500px;
+}
+
+
+/* =========================
+   FUTURISTIC BUTTON
+========================= */
+
+.cyber-button {
+
+    display: inline-block;
+
+    padding: 17px 32px;
+
+    color: #e0aaff;
+
+    text-decoration: none;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    border: 1px solid #9d4edd;
+
+    background: rgba(123, 44, 255, 0.08);
+
+    box-shadow:
+
+        0 0 10px rgba(123, 44, 255, 0.3),
+
+        inset 0 0 10px rgba(123, 44, 255, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.cyber-button:hover {
+
+    color: white;
+
+    background: #7b2cff;
+
+    box-shadow:
+
+        0 0 15px #7b2cff,
+
+        0 0 40px rgba(123, 44, 255, 0.6);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FUTURISTIC GRID
+========================= */
+
+.hero {
+
+    background-image:
+
+        linear-gradient(
+            rgba(123, 44, 255, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(123, 44, 255, 0.025) 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(123, 44, 255, 0.35),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030107,
+            #0b0315,
+            #120522,
+            #05020a
+        );
+
+    background-size:
+        50px 50px,
+        50px 50px,
+        auto,
+        auto;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero::before {
+        right: -200px;
+    }
+
+    .hero::after {
+        right: -100px;
+    }
+}
+
+/* =========================
+   SPACE MOTION EFFECT
+========================= */
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* Moving space background */
+
+.hero {
+    animation: spaceMove 18s ease-in-out infinite alternate;
+}
+
+
+@keyframes spaceMove {
+
+    0% {
+        background-position:
+            0% 0%,
+            0% 0%,
+            0% 0%,
+            0% 0%;
+    }
+
+    50% {
+        background-position:
+            80px 40px,
+            -60px 30px,
+            20% 40%,
+            0% 0%;
+    }
+
+    100% {
+        background-position:
+            150px 80px,
+            -120px 60px,
+            30% 50%,
+            0% 0%;
+    }
+
+}
+
+/* =========================
+   FLOATING STARS
+========================= */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.7;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            #ffffff 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle,
+            #c77dff 1px,
+            transparent 1px
+        );
+
+    background-size:
+        120px 120px,
+        200px 200px;
+
+    animation:
+        starsMove 30s linear infinite;
+
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-200px, 120px);
+    }
+
+}
+
+/* =========================
+   FLOATING PLANET
+========================= */
+
+.planet {
+    position: relative;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #d8b4fe,
+            #7b2cff 35%,
+            #25004a 70%,
+            #09000f
+        );
+
+    box-shadow:
+        0 0 25px #7b2cff,
+        0 0 70px rgba(123, 44, 255, 0.6),
+        0 0 140px rgba(123, 44, 255, 0.3);
+
+    transition: transform 0.2s ease-out;
+}
+    
+
+
+.planet::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 70px;
+
+    left: -50px;
+
+    top: 55px;
+
+    border: 1px solid rgba(224, 170, 255, 0.6);
+
+    border-radius: 50%;
+
+    transform: rotate(-20deg);
+
+    box-shadow:
+        0 0 15px rgba(199, 125, 255, 0.5);
+
+}
+
+/* =========================
+   NEXUS LIBRARY
+========================= */
+
+.library {
+
+    min-height: calc(100vh - 78px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 80px 60px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(123, 44, 255, 0.25),
+            transparent 35%
+        ),
+
+        #05020a;
+
+}
+
+
+/* TITLE */
+
+.library-title {
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 70px;
+
+}
+
+
+.library-title p {
+
+    color: #9d4edd;
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.library-title h1 {
+
+    font-size: 52px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+    color: #e0aaff;
+
+    text-shadow:
+
+        0 0 10px #7b2cff,
+
+        0 0 30px rgba(123,44,255,0.5);
+
+}
+
+
+.library-title span {
+
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* BOOK GRID */
+
+.book-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* BOOK CARD */
+
+.book-card {
+
+    width: 250px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+
+        rgba(20, 5, 35, 0.75);
+
+    border: 1px solid #32105c;
+
+    box-shadow:
+
+        0 0 20px rgba(123,44,255,0.08);
+
+    transition: 0.4s;
+
+}
+
+
+.book-card:hover {
+
+    transform:
+        translateY(-15px)
+        scale(1.03);
+
+    border-color: #9d4edd;
+
+    box-shadow:
+
+        0 0 15px #7b2cff,
+
+        0 0 45px rgba(123,44,255,0.35);
+
+}
+
+
+/* BOOK COVER */
+
+.cover {
+
+    height: 310px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #19002f,
+            #7b2cff,
+            #170024
+        );
+
+    border: 1px solid #9d4edd;
+
+    box-shadow:
+
+        inset 0 0 30px rgba(0,0,0,0.5),
+
+        0 0 20px rgba(123,44,255,0.2);
+
+}
+
+
+.cover.purple {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #240038,
+            #9d4edd,
+            #08000e
+        );
+
+}
+
+
+.cover.blue {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #10002b,
+            #3c096c,
+            #05000a
+        );
+
+}
+
+
+.cover-symbol {
+
+    font-size: 80px;
+
+    color: #ffffff;
+
+    text-shadow:
+
+        0 0 15px #ffffff,
+
+        0 0 40px #c77dff;
+
+}
+
+
+.book-card h2 {
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.book-card p {
+
+    color: #8d7b9c;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* READ BUTTON */
+
+.read-button {
+
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border: 1px solid #7b2cff;
+
+    color: #c77dff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+
+.read-button:hover {
+
+    background: #7b2cff;
+
+    color: white;
+
+    box-shadow:
+
+        0 0 15px #7b2cff,
+
+        0 0 35px rgba(123,44,255,0.5);
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .library {
+
+        padding: 60px 20px;
+
+    }
+
+    .library-title h1 {
+
+        font-size: 36px;
+
+    }
+
+}
+
+/* =========================
+   FUTURISTIC READER
+========================= */
+
+.reader {
+
+    min-height: calc(100vh - 78px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 70px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(123, 44, 255, 0.25),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030107,
+            #0c0317,
+            #05020a
+        );
+
+}
+
+
+/* MOVING SPACE */
+
+.reader-stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.8) 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle,
+            rgba(199,125,255,0.6) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        130px 130px,
+        220px 220px;
+
+    animation:
+        readerStars 35s linear infinite;
+
+}
+
+
+@keyframes readerStars {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-200px, 150px);
+    }
+
+}
+
+
+/* READER HEADER */
+
+.reader-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.reader-header p {
+
+    color: #9d4edd;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.reader-header h1 {
+
+    font-size: 48px;
+
+    letter-spacing: 5px;
+
+    color: #e0aaff;
+
+    text-shadow:
+
+        0 0 10px #7b2cff,
+
+        0 0 30px rgba(123,44,255,0.5);
+
+    margin-bottom: 15px;
+
+}
+
+
+.reader-header span {
+
+    color: #887995;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+}
+
+
+/* READING PANEL */
+
+.reading-panel {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 60px 75px;
+
+    background:
+
+        rgba(10, 3, 20, 0.88);
+
+    border:
+
+        1px solid #35105f;
+
+    box-shadow:
+
+        0 0 30px rgba(123,44,255,0.12),
+
+        inset 0 0 40px rgba(123,44,255,0.03);
+
+}
+
+
+/* CHAPTER */
+
+.chapter-number {
+
+    color: #9d4edd;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.chapter h2 {
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.chapter p {
+
+    color: #b9aabe;
+
+    font-family: Georgia, serif;
+
+    font-size: inherit;
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* CONTROLS */
+
+.reader-controls {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 25px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.reader-controls button {
+
+    background: transparent;
+
+    border: 1px solid #7b2cff;
+
+    color: #c77dff;
+
+    padding: 12px 20px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+}
+
+
+.reader-controls button:hover {
+
+    background: #7b2cff;
+
+    color: white;
+
+    box-shadow:
+
+        0 0 15px #7b2cff;
+
+}
+
+
+.reader-controls span {
+
+    color: #716477;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .reader {
+
+        padding: 50px 15px;
+
+    }
+
+    .reader-header h1 {
+
+        font-size: 32px;
+
+    }
+
+    .reading-panel {
+
+        padding: 35px 25px;
+
+    }
+
+    .chapter p {
+
+        font-size: inherit;
+        
+
+    }
+
+    .reader-controls span {
+
+        display: none;
+
+    }
+
+}
+
+/* =========================
+   READING PROGRESS
+========================= */
+
+.progress-container {
+
+    position: fixed;
+
+    top: 78px;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #160726;
+
+    z-index: 100;
+
+}
+
+
+#progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #7b2cff,
+        #c77dff,
+        #ffffff
+    );
+
+    box-shadow:
+        0 0 10px #9d4edd,
+        0 0 20px #7b2cff;
+
+    transition: width 0.5s ease;
+
+}
+
+/* =========================
+   READER TOOLS
+========================= */
+
+.reader-tools {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.reader-tools span {
+
+    color: #6f6278;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.reader-tools button {
+
+    width: 40px;
+    height: 32px;
+
+    background: rgba(123, 44, 255, 0.08);
+
+    border: 1px solid #35105f;
+
+    color: #c77dff;
+
+    cursor: pointer;
+
+}
+
+
+.reader-tools button:hover {
+
+    border-color: #9d4edd;
+
+    box-shadow:
+        0 0 10px rgba(157, 78, 221, 0.5);
+
+}
+
+#book-content {
+    font-size: 18px;
+} 
+
+.page-change {
+
+    animation: pageShift 0.45s ease;
+
+}
+
+
+@keyframes pageShift {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+/* =========================
+   3D FLOATING BOOKS
+========================= */
+
+/* FLOATING WRAPPER */
+
+.book-float {
+    animation: bookFloat 5s ease-in-out infinite;
+}
+
+.book-float:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.book-float:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.book-float:nth-child(4) {
+    animation-delay: 3s;
+}
+
+@keyframes bookFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes bookFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.book-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.book-card .cover {
+    transform: translateZ(25px);
+}
+
+.book-card h2,
+.book-card p,
+.book-card .read-button {
+    position: relative;
+    transform: translateZ(15px);
+}
+
+.book-float {
+    perspective: 1000px;
+}
+
+.book-card {
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.stars {
+    transition: transform 0.2s ease-out;
+}
+
+.planet {
+    transition: transform 0.25s ease-out;
+}
+
+/* =========================
+   PLANET FLOAT WRAPPER
+========================= */
+
+.planet-float {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: 18%;
+    top: 50%;
+
+    animation: planetFloat 6s ease-in-out infinite;
+
+    z-index: 1;
+}
+
+
+@keyframes planetFloat {
+
+    0%, 100% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 20px));
+    }
+
+}
+
+/* =========================
+   NEXUS WARP TRANSITION
+========================= */
+
+.warp-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #020006;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* WHEN WARP STARTS */
+
+.warp-screen.active {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* CENTRAL PORTAL */
+
+.warp-core {
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+
+        0 0 20px white,
+
+        0 0 50px #c77dff,
+
+        0 0 100px #7b2cff,
+
+        0 0 200px #7b2cff;
+
+}
+
+
+/* START THE PORTAL EXPLOSION */
+
+.warp-screen.active .warp-core {
+
+    animation:
+        warpCore 1.5s ease-in forwards;
+}
+
+
+@keyframes warpCore {
+
+    0% {
+
+        transform: scale(0.2);
+
+        opacity: 0;
+
+    }
+
+
+    30% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+
+    70% {
+
+        transform: scale(12);
+
+    }
+
+
+    100% {
+
+        transform: scale(100);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* SYSTEM MESSAGE */
+
+.warp-text {
+
+    position: absolute;
+
+    bottom: 15%;
+
+    color: #c77dff;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 10px #7b2cff;
+
+}
+
+
+.warp-screen.active .warp-text {
+
+    animation:
+        warpText 1.4s ease forwards;
+
+}
+
+
+@keyframes warpText {
+
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.warp-screen::before,
+.warp-screen::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 120px;
+
+    background:
+        linear-gradient(
+            transparent,
+            #c77dff,
+            white,
+            transparent
+        );
+
+    top: 50%;
+    left: 50%;
+
+    opacity: 0;
+
+}
+
+
+.warp-screen.active::before {
+
+    animation:
+        warpLineOne 0.7s linear infinite;
+
+}
+
+
+.warp-screen.active::after {
+
+    animation:
+        warpLineTwo 0.6s linear infinite;
+
+}
+
+
+@keyframes warpLineOne {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(-300px, -300px)
+            rotate(-45deg)
+            scaleY(0.2);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(300px, 300px)
+            rotate(-45deg)
+            scaleY(4);
+
+    }
+
+}
+
+
+@keyframes warpLineTwo {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(300px, -300px)
+            rotate(45deg)
+            scaleY(0.2);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(-300px, 300px)
+            rotate(45deg)
+            scaleY(4);
+
+    }
+
+}
+
+/* =========================
+   BOOK OPEN TRANSITION
+========================= */
+
+.book-transition {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background:
+        radial-gradient(
+            circle,
+            #21003d,
+            #07000d 60%
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.book-transition.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* FUTURISTIC BOOK */
+
+.transition-book {
+
+    width: 140px;
+
+    height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #c77dff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #130023,
+            #7b2cff,
+            #1b0031
+        );
+
+    color: white;
+
+    font-size: 60px;
+
+    box-shadow:
+
+        0 0 20px #7b2cff,
+
+        0 0 60px rgba(123,44,255,0.7);
+
+}
+
+
+.book-transition.active .transition-book {
+
+    animation:
+        bookZoom 1.3s ease-in forwards;
+
+}
+
+
+@keyframes bookZoom {
+
+    0% {
+
+        transform:
+            scale(0.4)
+            rotateY(45deg);
+
+        opacity: 0;
+
+    }
+
+    35% {
+
+        transform:
+            scale(1)
+            rotateY(0deg);
+
+        opacity: 1;
+
+    }
+
+    70% {
+
+        transform:
+            scale(1.4)
+            rotateY(-10deg);
+
+    }
+
+    100% {
+
+        transform:
+            scale(7);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* TEXT */
+
+.book-transition p {
+
+    margin-top: 35px;
+
+    color: #c77dff;
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+}
+
+
+.book-transition.active p {
+
+    animation:
+        archiveText 1.1s ease forwards;
+
+}
+
+
+@keyframes archiveText {
+
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+/* =========================
+   NEXUS DATABASE SEARCH
+========================= */
+
+.library-search {
+    position: relative;
+    z-index: 5;
+
+    max-width: 650px;
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.library-search span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #7b2cff;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.library-search input {
+    width: 100%;
+
+    padding: 18px 22px;
+
+    color: #e0aaff;
+
+    background:
+        rgba(15, 3, 28, 0.8);
+
+    border: 1px solid #35105f;
+    outline: none;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+}
+
+.library-search input::placeholder {
+    color: #66536f;
+}
+
+.library-search input:focus {
+    border-color: #9d4edd;
+
+    box-shadow:
+        0 0 10px rgba(157, 78, 221, 0.5),
+        0 0 35px rgba(123, 44, 255, 0.2);
+}
+
+/* =========================
+   NEXUS ABOUT PAGE
+========================= */
+
+.about-page {
+
+    min-height: calc(100vh - 78px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(123, 44, 255, 0.28),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #020005,
+            #0b0216,
+            #120321,
+            #05020a
+        );
+}
+
+
+.about-content {
+
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.about-content h1 {
+
+    font-size: 68px;
+
+    line-height: 1;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #e0aaff,
+            #7b2cff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.about-text {
+
+    max-width: 550px;
+
+    color: #a698ad;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* GLOWING SPACE ORB */
+
+.about-orb {
+
+    position: absolute;
+
+    right: 12%;
+
+    width: 340px;
+    height: 340px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(199,125,255,0.25);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+        orbFloat 6s ease-in-out infinite;
+}
+
+
+.orb-core {
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffffff,
+            #c77dff 20%,
+            #7b2cff 55%,
+            #170029
+        );
+
+    box-shadow:
+        0 0 25px #9d4edd,
+        0 0 70px rgba(123,44,255,0.6),
+        0 0 150px rgba(123,44,255,0.3);
+}
+
+
+@keyframes orbFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-20px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .about-page {
+
+        padding: 60px 30px;
+
+    }
+
+
+    .about-content h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .about-orb {
+
+        opacity: 0.25;
+
+        right: -160px;
+
+    }
+
+}
+
+/* =========================
+   NEXUS BOOT SCREEN
+========================= */
+
+#loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(123,44,255,0.18),
+            transparent 35%
+        ),
+        #020006;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+#loader.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+/* BOX */
+
+.loader-box {
+
+    width: 420px;
+
+    max-width: 85%;
+
+    text-align: center;
+}
+
+
+.loader-label {
+
+    color: #7b2cff;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.loader-box h1 {
+
+    color: #e0aaff;
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 0 10px #7b2cff,
+        0 0 30px rgba(123,44,255,0.5);
+}
+
+
+/* LOADING BAR */
+
+.loader-track {
+
+    width: 100%;
+
+    height: 6px;
+
+    border: 1px solid #35105f;
+
+    background: #0b0214;
+
+    overflow: hidden;
+
+    margin-bottom: 18px;
+}
+
+
+#loader-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7b2cff,
+            #c77dff,
+            #ffffff
+        );
+
+    box-shadow:
+        0 0 15px #9d4edd;
+
+    transition: width 0.15s linear;
+}
+
+
+#loader-percent {
+
+    color: #c77dff;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+#loader-status {
+
+    color: #66536f;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+/* =========================
+   FEATURED SPACE ARCHIVE
+========================= */
+
+.featured-section {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(123, 44, 255, 0.25),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 10% 70%,
+            rgba(90, 20, 150, 0.12),
+            transparent 30%
+        ),
+
+        #030107;
+}
+
+
+/* HEADING */
+
+.featured-heading {
+
+    margin-bottom: 70px;
+
+}
+
+
+.featured-heading p {
+
+    color: #9d4edd;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.featured-heading h2 {
+
+    font-size: 50px;
+
+    letter-spacing: 5px;
+
+    color: #e0aaff;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 20px rgba(123,44,255,0.5);
+
+}
+
+
+.featured-heading span {
+
+    color: #70647a;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* BOOK GRID */
+
+.featured-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 70px;
+
+}
+
+
+/* BOOK */
+
+.featured-book {
+
+    width: 230px;
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+
+}
+
+
+/* WHEN JAVASCRIPT REVEALS IT */
+
+.featured-book.reveal {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.featured-cover {
+
+    height: 320px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 70px;
+
+    color: white;
+
+    border: 1px solid #5b218f;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #11001f,
+            #40106c,
+            #7b2cff,
+            #170025
+        );
+
+    box-shadow:
+        0 0 25px rgba(123,44,255,0.25);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+.featured-book:hover .featured-cover {
+
+    transform:
+        translateY(-12px)
+        scale(1.03);
+
+    box-shadow:
+        0 0 20px #7b2cff,
+        0 0 60px rgba(123,44,255,0.4);
+
+}
+
+
+.featured-book h3 {
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.featured-book p {
+
+    color: #766a80;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.featured-book a {
+
+    color: #c77dff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.featured-book a:hover {
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #9d4edd;
+
+}
+
+
+/* LIBRARY BUTTON */
+
+.featured-library-button {
+
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    color: #c77dff;
+
+    border: 1px solid #7b2cff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+
+}
+
+
+.featured-library-button:hover {
+
+    background: #7b2cff;
+
+    color: white;
+
+    box-shadow:
+        0 0 15px #7b2cff,
+        0 0 40px rgba(123,44,255,0.5);
+
+}
+
+/* FEATURED BOOK DELAY ANIMATION */
+
+.featured-book:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.featured-book:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.featured-book:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+/* =========================================
+   NEXUS MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- NAVIGATION ---------- */
+
+    header {
+        height: auto;
+        min-height: 70px;
+
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        order: 3;
+    }
+
+    nav a {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .status {
+        font-size: 8px;
+    }
+
+
+    /* ---------- HOME HERO ---------- */
+
+    .hero {
+        min-height: 90vh;
+
+        padding:
+            80px
+            25px
+            60px;
+
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+
+        position: relative;
+
+        z-index: 5;
+    }
+
+    .system-text {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+
+        line-height: 1;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+
+        max-width: 320px;
+    }
+
+    .cyber-button {
+        padding: 14px 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------- PLANET ---------- */
+
+    .planet-float {
+        width: 130px;
+        height: 130px;
+
+        right: -35px;
+        top: 65%;
+
+        opacity: 0.55;
+    }
+
+    .planet {
+        width: 130px;
+        height: 130px;
+    }
+
+    .planet::before {
+        width: 200px;
+        height: 50px;
+
+        left: -35px;
+        top: 40px;
+    }
+
+
+    /* ---------- LIBRARY ---------- */
+
+    .library {
+        padding:
+            60px
+            20px;
+    }
+
+    .library-title {
+        margin-bottom: 45px;
+    }
+
+    .library-title h1 {
+        font-size: 34px;
+
+        letter-spacing: 3px;
+    }
+
+    .library-title p {
+        font-size: 9px;
+    }
+
+    .library-title span {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------- SEARCH ---------- */
+
+    .library-search {
+        width: 100%;
+
+        margin-bottom: 45px;
+    }
+
+    .library-search input {
+        padding: 15px;
+
+        font-size: 11px;
+    }
+
+
+    /* ---------- BOOKS ---------- */
+
+    .book-grid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px 15px;
+
+        align-items: start;
+    }
+
+    .book-float {
+        width: 100%;
+    }
+
+    .book-card {
+        width: 100%;
+
+        padding: 12px;
+    }
+
+    .cover {
+        height: 230px;
+
+        margin-bottom: 18px;
+    }
+
+    .cover-symbol {
+        font-size: 50px;
+    }
+
+    .book-card h2 {
+        font-size: 13px;
+
+        letter-spacing: 1px;
+    }
+
+    .book-card p {
+        font-size: 8px;
+    }
+
+    .read-button {
+        padding: 10px 12px;
+
+        font-size: 8px;
+    }
+
+
+    /* ---------- READER ---------- */
+
+    .reader {
+        padding:
+            50px
+            15px;
+    }
+
+    .reader-header {
+        margin-bottom: 30px;
+    }
+
+    .reader-header h1 {
+        font-size: 30px;
+
+        letter-spacing: 3px;
+    }
+
+    .reading-panel {
+        width: 100%;
+
+        padding:
+            35px
+            22px;
+    }
+
+    #book-content {
+        font-size: 16px;
+    }
+
+    .chapter p {
+        line-height: 1.8;
+    }
+
+    .reader-tools {
+        width: 100%;
+    }
+
+    .reader-controls {
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .reader-controls button {
+        padding: 11px 12px;
+
+        font-size: 9px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-page {
+        padding:
+            70px
+            25px;
+    }
+
+    .about-content h1 {
+        font-size: 42px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .about-orb {
+        width: 250px;
+        height: 250px;
+
+        right: -130px;
+
+        opacity: 0.25;
+    }
+
+
+    /* ---------- FEATURED BOOKS ---------- */
+
+    .featured-section {
+        padding:
+            90px
+            20px;
+    }
+
+    .featured-heading h2 {
+        font-size: 34px;
+    }
+
+    .featured-grid {
+        gap: 50px;
+    }
+
+    .featured-book {
+        width: 200px;
+    }
+
+    .featured-cover {
+        height: 280px;
+    }
+
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-card {
+        max-width: 280px;
+
+        margin: auto;
+    }
+
+    .cover {
+        height: 350px;
+    }
+
+    .library-title h1 {
+        font-size: 28px;
+    }
+
+    .reader-header h1 {
+        font-size: 25px;
+    }
+
+    .reading-panel {
+        padding:
+            30px
+            18px;
+    }
+
+}
