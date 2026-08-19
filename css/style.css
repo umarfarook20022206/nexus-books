@@ -2873,3 +2873,291 @@ body {
     display: block;
     background: #0a0012;
 }
+
+/* =========================================
+   BOOK DETAILS PAGE
+========================================= */
+
+.book-details-page {
+
+    min-height: calc(100vh - 78px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 80px 8%;
+
+    background:
+
+        radial-gradient(
+            circle at 25% 50%,
+            rgba(123,44,255,0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #020005,
+            #0b0216,
+            #120321,
+            #05020a
+        );
+}
+
+
+.book-details {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        340px 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* COVER */
+
+.details-cover {
+
+    height: 500px;
+
+    border: 1px solid #7b2cff;
+
+    box-shadow:
+
+        0 0 20px rgba(123,44,255,0.4),
+
+        0 0 80px rgba(123,44,255,0.15);
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+
+.details-cover:hover {
+
+    transform:
+        translateY(-10px)
+        rotateY(-5deg);
+
+    box-shadow:
+
+        0 0 25px #7b2cff,
+
+        0 0 80px rgba(123,44,255,0.4);
+}
+
+
+.details-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* INFORMATION */
+
+.details-info h1 {
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+    color: #e0aaff;
+
+    text-shadow:
+        0 0 25px rgba(123,44,255,0.5);
+}
+
+
+.details-author {
+
+    color: #8e7a9d;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    margin-bottom: 30px;
+}
+
+
+.book-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+.book-tags span {
+
+    padding: 8px 12px;
+
+    border: 1px solid #45206c;
+
+    color: #c77dff;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    background:
+        rgba(123,44,255,0.06);
+}
+
+
+.book-description {
+
+    max-width: 600px;
+
+    color: #aa9bb2;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+.book-meta {
+
+    margin-bottom: 35px;
+}
+
+
+.book-meta p {
+
+    color: #77687f;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.book-meta strong {
+
+    color: #c77dff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .book-details-page {
+
+        padding:
+            60px
+            25px;
+
+    }
+
+
+    .book-details {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .details-cover {
+
+        width: 260px;
+
+        height: 390px;
+
+        margin: auto;
+
+    }
+
+
+    .details-info {
+
+        text-align: center;
+
+    }
+
+
+    .details-info h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .book-tags {
+
+        justify-content: center;
+
+    }
+
+
+    .book-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+}
+
+.details-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* THE UNWRITTEN ONE COVER */
+
+.featured-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-cover {
+    overflow: hidden;
+}
